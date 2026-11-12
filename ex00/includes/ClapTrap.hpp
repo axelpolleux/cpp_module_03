@@ -7,7 +7,9 @@ private:
 	int			_hit_points;
 	int			_energy_points;
 	int			_attack_damage;
-	void	noEnergy(std::string action);
+
+	void		noEnergy(std::string action);
+	void		printDeath();
 public:
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);

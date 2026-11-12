@@ -4,18 +4,16 @@
 int	main(void)
 {
 	ClapTrap	a = ClapTrap("Gregouin");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.attack("Gregouin2");
-	a.beRepaired(45);
-	a.takeDamage(32);
+	a.currentState();
+	for (int i = 0; i < 10; i++)
+		a.attack("Loic");
+	a.currentState();
+	a.attack("Test");
+	a.beRepaired(2);
+	a.takeDamage(11);
+	a.currentState();
+	a.takeDamage(1);
+	a.attack("Test");
+	a.beRepaired(1);
 	return 0;
 }
