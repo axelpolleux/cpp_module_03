@@ -1,21 +1,18 @@
+#include <iostream>
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
 #include "../includes/ScavTrap.hpp"
 #include "../includes/ClapTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name_input) {
+ScavTrap::ScavTrap(std::string name_input) : ClapTrap(name_input) {
     std::cout << "ScavTrap constructor called" << std::endl;
-    this->_name = name_input;
     this->_hit_points = 100;
     this->_energy_points = 50;
     this->_attack_damage = 20;
 }
 
-void ScavTrap::guardGate() {
-}
-
-ScavTrap::ScavTrap(ScavTrap const &other) {
+ScavTrap::ScavTrap(ScavTrap const &other) : ClapTrap(other) {
     *this = other;
 }
 
@@ -26,10 +23,11 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &other) {
         this->_energy_points = other._energy_points;
         this->_hit_points = other._hit_points;
     }
+    return (*this);
 }
 
-ScavTrap::guardGate() {
-
+void ScavTrap::guardGate() {
+    std::cout << this->_name << " ScavTrap is now in Gate keeper mode" << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
