@@ -4,12 +4,12 @@
 
 ClapTrap::ClapTrap(std::string name_input): _name(name_input), _hit_points(10), _energy_points(10), _attack_damage(0)
 {
-	std::cout << "Default constructor called {" << this->_name << "}" << std::endl;
+	std::cout << "ClapTrap constructor called {" << this->_name << "}" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
-	std::cout << "Copy construcor" << std::endl;
+	std::cout << "Copy constructor" << std::endl;
 	*this = other;
 }
 
@@ -37,7 +37,7 @@ void	ClapTrap::currentState()
 
 void ClapTrap::noEnergy(std::string action)
 {
-	std::cout << "ClapTrap" << this->_name;
+	std::cout << "ClapTrap " << this->_name;
 	std::cout << " has not enough energy to execute this action: " << action << std::endl;
 }
 
@@ -91,5 +91,5 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Default destructor called {" << this->_name << "}" << std::endl;
+	std::cout << "ClapTrap destructor called {" << this->_name << "}" << std::endl;
 }
