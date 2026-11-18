@@ -10,4 +10,5 @@ public:
 	~ScavTrap();
 
 	void	guardGate();
+	void	attack(const std::string& target);
 };
