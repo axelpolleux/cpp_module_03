@@ -6,7 +6,7 @@ SRC_DIR = src
 
 OUT_DIRS := $(OUTPUT_DIR)/$(SRC_DIR)
 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp ClapTrap.cpp FragTrap.cpp
 
 INCLUDES = includes
 
