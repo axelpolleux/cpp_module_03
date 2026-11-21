@@ -1,6 +1,5 @@
-#include "ClapTrap.hpp"
-#include "../includes/ClapTrap.hpp"
 #include <iostream>
+#include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name_input): _name(name_input), _hit_points(10), _energy_points(10), _attack_damage(0)
 {

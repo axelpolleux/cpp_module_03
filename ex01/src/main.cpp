@@ -1,6 +1,5 @@
 #include "ClapTrap.hpp"
-#include "../includes/ClapTrap.hpp"
-#include "../includes/ScavTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void)
 {
@@ -13,6 +12,7 @@ int	main(void)
 	// a.guardGate();
 	a.currentState();
 
+	// ScavTrap
 	ScavTrap	b = ScavTrap("Little Gregouin");
 	b.currentState();
 	b.takeDamage(1);
